@@ -13,3 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+  $('.hidden_content').hide();
+
+  $('.category_title').on('click', function() {
+    var categoryContent = $(this).children('.hidden_content');
+    // replace this with toggleClass('show'), once bootstrap is here
+    if(categoryContent.hasClass('show')) {
+      categoryContent.hide();
+    }
+    else {
+      categoryContent.show();
+    }
+  });
+});
