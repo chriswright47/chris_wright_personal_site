@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require_tree .
 
 $(function() {
@@ -19,12 +20,6 @@ $(function() {
 
   $('.category_title').on('click', function() {
     var categoryContent = $(this).children('.hidden_content');
-    // replace this with toggleClass('show'), once bootstrap is here
-    if(categoryContent.hasClass('show')) {
-      categoryContent.hide();
-    }
-    else {
-      categoryContent.show();
-    }
+    categoryContent.toggle();
   });
 });

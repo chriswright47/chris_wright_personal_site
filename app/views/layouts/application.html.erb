@@ -7,16 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class='nav navbar navbar-top'>
-  <ul>
+<div class='navbar navbar-default navbar-fixed-top'>
+  <div class='container'>
+  <div class='navbar-collapse'>
+  <ul class='nav navbar-nav'>
     <li><%= link_to 'ChrisWright', home_page_path %></li>
-    <li><%= link_to 'projects', projects_path %></li>
-    <li>e - christopher.wright47@gmail.com</li>
-    <li>p - 503.961.3876</li>
-    <li>t - @chris_wright_47</li>
+    <li><%= link_to 'My Projects', projects_path %></li>
   </ul>
+  <ul class='nav navbar-nav navbar-right'>
+    <li><a>e - christopher.wright47@gmail.com</a></li>
+    <li><a>p - 503.961.3876</a></li>
+    <li><a>t - @chris_wright_47</a></li>
+  </ul>
+  </div>
+  </div>
 </div>
+<div class='container'>
 <%= yield %>
-
+</div>
 </body>
 </html>
