@@ -18,8 +18,12 @@
 $(function() {
   $('.hidden_content').hide();
 
-  $('.category_title').on('click', function() {
-    var categoryContent = $(this).children('.hidden_content');
+  $('.details_button').on('click', function(event) {
+    event.preventDefault();
+    var categoryContent = $(this).next('.hidden_content');
     categoryContent.toggle();
+    if ($(this).text()[0] === 'm'){
+      $(this).html('<a class="btn btn-danger" href="#" role="button">less &laquo;</a>');}
+    else {$(this).html('<a class="btn btn-primary" href="#" role="button">more &raquo;</a>');}
   });
 });

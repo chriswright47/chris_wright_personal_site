@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :email, :name
 
-  # has_secure_password
+  has_secure_password
 end
