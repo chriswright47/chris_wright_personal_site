@@ -2,7 +2,12 @@ ChrisWrightSite::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  get '/' => 'pages#home', as: 'home'
+  get '/' => 'pages#home', as: 'home_page'
+  get '/login' => 'sessions#new', as: 'login'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy', as: 'logout'
+
+  resources :projects
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

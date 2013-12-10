@@ -1,48 +1,77 @@
-<div class='container'><h2>My name is Chris Wright</h2>
-
-<h2>I like to code, swim, run, and 47 other things</h2>
-
-<ul>
-  <li class='category_title'>
-    I recently graduated from <%= link_to '##Dev BootCamp', 'http://www.devbootcamp.com' %> in Chicago
-    <ul class='hidden_content'>
-      <li>DBC is an intensive, nine-week program that teached Ruby, Web Fundamentals, and (eventually) Ruby on Rails and Test Driven Development</li>
-    </ul>
-  </li>
-  <li class='category_title'>
-    I went to <%= link_to '##Pomona College', 'http://www.wikipedia.com/pomonacollege' %> in Claremont, California
-    <ul class='hidden_content'>
-      <li>I majored in mathematical economics and minored in biology</li>
-      <li>I wrote a thesis on statistically predicting the outcome of MarchMadness basketball games<!-- add in link to pdf file for thesis here --></li>
-      <li>I swam for four years as an NCAA athlete, picking up an Academic All-American honorable mention my sophomore year and was named a captain of the team my senior year</li>
-    </ul>
-  </li>
-  <li class='category_title'>
-    I went to Lincoln High School in Portland and recently returned to the LHS community as an assistant swim coach
-  </li>
-  <li class='category_title'>
-    I am always working on side projects, most recently a <%= link_to '##Relationship Checkup Site', 'http://young-mesa-8988.herokuapp.com' %> for <%= link_to '##The Gottman Institute', 'http://www.GottmanInstitute.com' %>
-    <ul class='hidden_content'>
-      <li>I worked on a team of five developers to build a relationship checkup site for the Gottman Institute as a part of my final project at Dev BootCamp in Chicago. I am staying on and working with the Gottmans to finish the site after graduating DBC</li>
-    </ul>
-  </li>
-  <li class='category_title'>
-    I have tutored high school students in math and science for TutorDoctor
-  </li>
-  <li class='category_title'>
-    I worked for a while teaching physicians how to use medical software
-    <ul class='hidden_content'>
-      <li>In fact, I applied to medical schools out of college before I decided to pursue my passion in programming</li>
-    </ul>
-  </li>
-  <li class='category_title'>I love playing and watching sports
-    <ul class='hidden_content'>
-      <li>I love running, swimming, and playing basketball</li>
-      <li>I love watching the <%= link_to '##Blazers', 'http://www.portlandblazers.com' %></li>
-      <li>I love watching the <%= link_to '##Seahawks', 'http://www.seahawks.com' %> and the <%= link_to '##Mariners', 'http://www.mariners.com' %> </li>
-      <li>I also love any sports of my alma maters, Pomona and Lincoln</li>
-    </ul>
-  </li>
-</ul>
-
-</div>
+  <h2>Hi, I'm Chris</h2>
+  <h3>I like to code, run, swim, and about <%= link_to '47', 'http://www.pomona.edu/about/pomoniana/the-mystery-of-47.aspx' %> other things</h3>
+  <br>
+  <ul class="unstyled">
+    <li class='category_title'>
+      <div class='lead'>
+        I went to <%= link_to 'Pomona College', 'http://en.wikipedia.org/wiki/Pomona_College' %> in Claremont, California
+      </div>
+      <p class='details_button'><a class="btn btn-primary" href="#" role="button">more &raquo;</a></p>
+      <ul class='hidden_content'>
+        <li>I majored in mathematical economics and minored in biology</li>
+        <li>I swam for four years as an NCAA athlete, picking up an Academic All-American honorable mention my sophomore year and was named a captain of the team my senior year</li>
+        <li>I wrote a thesis on March Madness<%#= link_to 'statistically predicting the outcome of MarchMadness basketball games', '/wright_thesis.pdf' %><!-- add in link to pdf file for thesis here --></li>
+      </ul>
+    </li>
+    <br>
+    <li class='category_title'>
+      <div class='lead'>
+        I went to Lincoln High School in Portland and recently returned to the LHS community as an assistant swim coach
+      </div>
+      <p class='details_button'><a class="btn btn-primary" href="#" role="button">more &raquo;</a></p>
+    </li>
+    <br>
+    <li class='category_title'>
+      <div class='lead'>
+        I am always working on side projects, most recently a <%= link_to 'Relationship Checkup Site', 'http://young-mesa-8988.herokuapp.com' %> for <%= link_to 'The Gottman Institute', 'http://www.gottman.com' %>
+      </div>
+      <p class='details_button'><a class="btn btn-primary" href="#" role="button">more &raquo;</a></p>
+      <ul class='hidden_content'>
+        <li>I worked on a team of five developers to build a relationship checkup site for the Gottman Institute as a part of my final project at Dev BootCamp in Chicago. I am staying on and working with the Gottmans to finish the site after graduating DBC</li>
+      </ul>
+    </li>
+    <br>
+    <li class='category_title'>
+      <div class='lead'>
+        I recently spent nine weeks learning Ruby on Rails at <%= link_to 'Dev BootCamp', 'http://www.devbootcamp.com' %>
+      </div>
+      <p class='details_button'><a class="btn btn-primary" href="#" role="button">more &raquo;</a></p>
+      <ul class='hidden_content'>
+        <li>DBC is an immersive program that teaches Ruby on Rails, Web Fundamentals, and Test Driven Development</li>
+      </ul>
+    </li>
+    <br>
+    <li class='category_title'>
+      <div class='lead'>
+        I have tutored high school students in math and science for TutorDoctor
+      </div>
+      <p class='details_button'><a class="btn btn-primary" href="#" role="button">more &raquo;</a></p>
+      <ul class='hidden_content'>
+        <li>I love teaching and communicating ideas with students</li>
+        <li>It is one of the most rewarding things in my life to watch students progress</li>
+      </ul>
+    </li>
+    <br>
+    <li class='category_title'>
+      <div class='lead'>
+        I worked for a while teaching physicians how to use medical software
+      </div>
+      <p class='details_button'><a class="btn btn-primary" href="#" role="button">more &raquo;</a></p>
+      <ul class='hidden_content'>
+        <li>In fact, I applied to medical schools out of college before I decided to pursue my passion in programming</li>
+      </ul>
+    </li>
+    <br>
+    <li class='category_title'>
+      <div class='lead'>
+        I love playing and watching sports
+      </div>
+        <p class='details_button'><a class="btn btn-primary" href="#" role="button">more &raquo;</a></p>
+      <ul class='hidden_content'>
+        <li>I love running, swimming, and playing basketball</li>
+        <li>I love watching the <%= link_to 'Blazers', 'https://twitter.com/trailblazers' %></li>
+        <li>I love watching the <%= link_to 'Seahawks', 'https://twitter.com/Seahawks' %> and the <%= link_to 'Mariners', 'https://twitter.com/Mariners' %> </li>
+        <li>I'll also watch any sports involving <%= link_to 'Pomona College', "https://twitter.com/Sagehens" %> or Lincoln High School</li>
+      </ul>
+    </li>
+  </ul>
