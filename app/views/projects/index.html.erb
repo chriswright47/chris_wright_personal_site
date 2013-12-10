@@ -1,9 +1,12 @@
-<h1>My projects</h1>
+<div><h1>My projects</h1></div>
+<br>
 
-<ul>
+<div>
+<ul class='unstyled'>
   <% @projects.each do |project| %>
-    <li>
+    <li class='lead'>
       <%= link_to project.name, project_path(project) %>
     </li>
   <% end %>
 </ul>
+</div>
