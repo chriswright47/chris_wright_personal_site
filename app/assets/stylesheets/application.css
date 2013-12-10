@@ -15,3 +15,13 @@
 .container {
   margin-top: 40px;
 }
+
+.navbar-fixed-top {
+  z-index: 1;
+  background-color: white;
+}
+
+.navbar-fixed-bottom {
+  z-index: 1;
+  background-color: white;
+}
