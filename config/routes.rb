@@ -3,6 +3,7 @@ ChrisWrightSite::Application.routes.draw do
   # first created -> highest priority.
 
   get '/' => 'pages#home', as: 'home_page'
+  get '/chris' => 'pages#about_me', as: 'about_me'
   get '/login' => 'sessions#new', as: 'login'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy', as: 'logout'
