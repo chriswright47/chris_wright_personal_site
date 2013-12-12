@@ -1,7 +1,7 @@
 <h1><%= @project.name %></h1>
 <div><%= link_to 'Edit Project', edit_project_path(@project) if current_user%></div>
 <div><%#= button_to('Delete Project', :method => :delete) if current_user%></div>
-<div>Project completed for: <%= @project.company %></div>
+<div><em>Project completed for:</em> <strong><%= @project.company %></strong></div>
 <div><%= @project.description %></div>
 
 <div><%= link_to 'see it live here', @project.url_path %></div>
