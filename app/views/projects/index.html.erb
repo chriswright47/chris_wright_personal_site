@@ -1,8 +1,6 @@
-<div><h1>My projects</h1></div>
-<br>
+<div class='span7 offset1 projects_title'><h1>My projects</h1>
 
-<div>
-<ul class='unstyled'>
+<ul class='unstyled projects_list'>
   <% @projects.each do |project| %>
     <li class='lead'>
       <%= link_to project.name, project_path(project) %>
