@@ -23,7 +23,7 @@ $(function() {
     var categoryContent = $(this).next('.hidden_content');
     categoryContent.toggle();
     if ($(this).text()[0] === 'm'){
-      $(this).html('<a class="btn btn-danger" href="#" role="button">less &laquo;</a>');}
-    else {$(this).html('<a class="btn btn-primary" href="#" role="button">more &raquo;</a>');}
+      $(this).html('<a class="btn btn-small href="#" role="button">less &laquo;</a>');}
+    else {$(this).html('<a class="btn btn-small" href="#" role="button">more &raquo;</a>');}
   });
 });
