@@ -9,6 +9,7 @@ ChrisWrightSite::Application.routes.draw do
   get '/logout' => 'sessions#destroy', as: 'logout'
 
   resources :projects
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
