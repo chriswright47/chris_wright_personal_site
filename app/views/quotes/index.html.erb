@@ -1,0 +1,12 @@
+<ul>
+  <% @quotes.each do |quote| %>
+    <li>
+      <p><%= quote.content %></p>
+      <p><%= link_to quote.author, quote.link %></p>
+      <p><%= link_to 'edit', edit_quote_path(quote) %></p>
+    </li>
+  <% end %>
+</ul>
+<div>
+  <%= link_to 'new quote', new_quote_path %>
+</div>
