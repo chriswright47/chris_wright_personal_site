@@ -8,6 +8,10 @@ ChrisWrightSite::Application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy', as: 'logout'
 
+  get '/quotes/rand_quote' => 'quotes#rand_quote'
+
+  resources :quotes, except: [:show]
+
   resources :projects
 
   # Sample of regular route:

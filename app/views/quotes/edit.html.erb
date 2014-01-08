@@ -1,0 +1,6 @@
+<h2>Edit quote</h2>
+<%= render :partial => 'form', :locals => {quote: @quote} %>
+
+<%= form_tag("/quotes/#{@quote.id}", :method => :delete) do %>
+  <div><%= submit_tag 'Delete' %></div>
+<% end %>

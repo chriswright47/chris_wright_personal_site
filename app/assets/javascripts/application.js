@@ -18,6 +18,13 @@
 $(function() {
   $('.hidden_content').hide();
 
+  setInterval(function() {
+    $.get('/quotes/rand_quote', function(data) {
+      $('.quote').html(data)
+    });
+    console.log('reloaded quote');
+  }, 5000);
+
   $('.details_button').on('click', function(event) {
     event.preventDefault();
     var categoryContent = $(this).next('.hidden_content');
