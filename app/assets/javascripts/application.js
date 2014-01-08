@@ -16,15 +16,11 @@
 //= require_tree .
 
 $(function() {
-  $('.hidden_content').hide();
+  refreshQuote();
 
   setInterval(function() {
-    $.get('/quotes/rand_quote', function(data) {
-      $('.quote').fadeOut(500, function() {
-        $(this).html(data).fadeIn(500)
-      });
-    });
-  }, 5000);
+    refreshQuote();
+  }, 7000);
 
   $('.details_button').on('click', function(event) {
     event.preventDefault();
@@ -35,3 +31,11 @@ $(function() {
     else {$(this).html('<a class="btn btn-small" href="#" role="button">more &raquo;</a>');}
   });
 });
+
+var refreshQuote = function() {
+  $.get('/quotes/rand_quote', function(data) {
+      $('.quote').fadeOut(500, function() {
+        $(this).html(data).fadeIn(500)
+      });
+    });
+}
