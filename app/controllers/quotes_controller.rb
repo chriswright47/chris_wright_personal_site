@@ -1,3 +1,4 @@
+require 'json'
 class QuotesController < ApplicationController
   def index
     @quotes = Quote.all
@@ -26,5 +27,10 @@ class QuotesController < ApplicationController
     quote = Quote.find(params[:id])
     quote.destroy
     redirect_to quotes_path
+  end
+
+  def rand_quote
+    @quote = Quote.find(Quote.pluck(:id).sample)
+    render partial: 'pages/quote', locals: {quote: @quote}
   end
 end
