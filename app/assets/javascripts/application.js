@@ -20,9 +20,10 @@ $(function() {
 
   setInterval(function() {
     $.get('/quotes/rand_quote', function(data) {
-      $('.quote').html(data)
+      $('.quote').fadeOut(500, function() {
+        $(this).html(data).fadeIn(500)
+      });
     });
-    console.log('reloaded quote');
   }, 5000);
 
   $('.details_button').on('click', function(event) {
