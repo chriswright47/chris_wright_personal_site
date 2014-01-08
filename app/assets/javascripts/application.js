@@ -23,7 +23,7 @@ $(function() {
       $('.quote').html(data)
     });
     console.log('reloaded quote');
-  }, 2000);
+  }, 5000);
 
   $('.details_button').on('click', function(event) {
     event.preventDefault();
