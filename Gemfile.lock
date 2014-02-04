@@ -94,6 +94,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
+    rufus-scheduler (3.0.5)
+      tzinfo
     sass (3.2.12)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -133,6 +135,7 @@ DEPENDENCIES
   less-rails
   pg
   rails (= 3.2.15)
+  rufus-scheduler
   sass-rails (~> 3.2.3)
   therubyracer
   twitter-bootstrap-rails
