@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :signed_in_user, except: [:index, :show]
 
   def index
     @projects = Project.all
@@ -9,40 +10,30 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    redirect_to home_page_path unless current_user
     @project = Project.new()
   end
 
   def create
-    if current_user
-      Project.create(params[:project])
-    end
-    redirect_to projects_path
+    Project.create(params[:project])
   end
 
   def edit
-    if current_user
-      @project = Project.find(params[:id])
-    else
-      redirect_to projects_path
-    end
+    @project = Project.find(params[:id])
   end
 
   def update
-    if current_user
-      project = Project.find(params[:id])
-      project.update_attributes(params[:project])
-      redirect_to project_path(project)
-    else
-      redirect_to projects_path
-    end
+    project = Project.find(params[:id])
+    project.update_attributes(params[:project])
+    redirect_to project_path(project)
   end
 
   def destroy
-    if current_user
-      project = Project.find(params[:id])
-      project.destroy
-    end
-    redirect_to projects_path
+    project = Project.find(params[:id])
+    project.destroy
+  end
+
+  private
+  def signed_in_user
+    redirect_to projects_path unless current_user
   end
 end
