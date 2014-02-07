@@ -1,10 +1,11 @@
-<div class='span7 offset1 projects_title'><h1>My projects</h1>
-
-<ul class='unstyled projects_list'>
-  <% @projects.each do |project| %>
-    <li class='lead'>
-      <%= link_to project.name, project_path(project) %>
-    </li>
-  <% end %>
-</ul>
+<div class='span7 offset1 projects_title'>
+  <h1>Things I've worked on recently</h1>
+  <h3>Projects</h3>
+  <ul class='unstyled projects_list'>
+    <%= render @projects %>
+  </ul>
+  <h3>Cool code samples</h3>
+  <ul class='unstyled code_sample_list'>
+    <%#= render @code_samples %>
+  </ul>
 </div>
