@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    @code_samples = CodeSample.all
   end
 
   def show
@@ -10,11 +11,12 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new()
+    @project = Project.new
   end
 
   def create
-    Project.create(params[:project])
+    project Project.create(project_params)
+    redirect_to project
   end
 
   def edit
@@ -23,16 +25,19 @@ class ProjectsController < ApplicationController
 
   def update
     project = Project.find(params[:id])
-    project.update_attributes(params[:project])
+    project.update_attributes(project_params)
     redirect_to project_path(project)
   end
 
   def destroy
-    project = Project.find(params[:id])
-    project.destroy
+     Project.find(params[:id]).destroy
   end
 
   private
+  def project_params
+    params.require(:project).permit(:name, :company, :description, :url_path)
+  end
+
   def signed_in_user
     redirect_to projects_path unless current_user
   end

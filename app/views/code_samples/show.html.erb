@@ -1,0 +1,15 @@
+<h1><%= @code_sample.title %></h1>
+
+<div class='code_sample_description lead col-6'>
+  <%= @code_sample.description %>
+</div>
+
+<div class='code_sample_content'>
+  <pre><%= @code_sample.content %></pre>
+</div>
+
+<% if current_user %>
+  <%= link_to 'Edit', edit_code_sample_path(@code_sample) %>
+  <br>
+  <%= link_to 'Delete', @code_sample, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

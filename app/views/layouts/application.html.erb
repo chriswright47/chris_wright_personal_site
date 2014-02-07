@@ -12,8 +12,12 @@
   <ul class='nav navbar-nav'>
     <li><%= link_to 'ChrisWright', home_page_path %></li>
     <li><%= link_to 'About Me', about_me_path %></li>
-    <li><%= link_to 'My Projects', projects_path %></li>
-    <li><%= (link_to 'logout', logout_path) if current_user %></li>
+    <li><%= link_to 'My Work', projects_path %></li>
+    <% if current_user %>
+      <li><%= link_to 'add project', new_project_path %></li>
+      <li><%= link_to 'add code sample', new_code_sample_path %></li>
+      <li><%= link_to 'logout', logout_path %></li>
+    <% end %>
   </ul>
   </div>
 </div>

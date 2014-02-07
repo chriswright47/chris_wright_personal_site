@@ -13,6 +13,7 @@ ChrisWrightSite::Application.routes.draw do
   resources :quotes, except: [:show]
 
   resources :projects
+  resources :code_samples, except: [:index]
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

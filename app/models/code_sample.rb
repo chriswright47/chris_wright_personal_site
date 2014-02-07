@@ -1,5 +1,3 @@
-class User < ActiveRecord::Base
+class CodeSample < ActiveRecord::Base
   include ActiveModel::ForbiddenAttributesProtection
-
-  has_secure_password
 end
